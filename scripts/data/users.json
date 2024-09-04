@@ -1,0 +1,4 @@
+[
+    { "userName": "Scott", "email": "gm@test.com", "password": "test", "userRole": "gm", "userImg": "" },
+    { "userName": "Player", "email": "player@test.com", "password": "test", "userRole": "player", "userImg": "" }
+]

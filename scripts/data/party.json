@@ -1,0 +1,50 @@
+[
+    {
+        "pcName": "Drax Attacks", 
+        "pcRace": "Goliath", 
+        "pcClass": "Barbarian",
+        "pcSubclass": "Wild Magic", 
+        "pcLevel": 7,
+        "pcBackstory": "",
+        "pcAllies": "", 
+        "pcGoals": "", 
+        "pcExtras": "",
+        "pcImg": "./images/cawlin.png" 
+    },
+    {
+        "pcName": "Locky McWarlock", 
+        "pcRace": "Half-Elf", 
+        "pcClass": "Warlock",
+        "pcSubclass": "Celestial", 
+        "pcLevel": 7,
+        "pcBackstory": "",
+        "pcAllies": "", 
+        "pcGoals": "", 
+        "pcExtras": "",
+        "pcImg": "./images/cawlin.png" 
+    },
+    {
+        "pcName": "Eris Vo", 
+        "pcRace": "Air Genasi", 
+        "pcClass": "Sorceror",
+        "pcSubclass": "Wild Magic", 
+        "pcLevel": 7,
+        "pcBackstory": "",
+        "pcAllies": "", 
+        "pcGoals": "", 
+        "pcExtras": "",
+        "pcImg": "./images/cawlin.png" 
+    },
+    {
+        "pcName": "Evrenden", 
+        "pcRace": "Giff", 
+        "pcClass": "Ranger",
+        "pcSubclass": "Swarmkeeper", 
+        "pcLevel": 7,
+        "pcBackstory": "",
+        "pcAllies": "", 
+        "pcGoals": "", 
+        "pcExtras": "",
+        "pcImg": "./images/cawlin.png" 
+    }
+]
