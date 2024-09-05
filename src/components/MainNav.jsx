@@ -36,8 +36,18 @@ export default function MainNav({ brand }) {
             <Nav.Link href="/party">Party Info</Nav.Link>
             <Nav.Link href="/sessionNotes">Session Notes</Nav.Link>
             <Nav.Link href="/generators">Generators</Nav.Link>
-            <Nav.Link href="/user">User</Nav.Link>
-            <Nav.Link onClick={handleLogout}>Log Out</Nav.Link>
+            {/* <Nav.Link href="/user">User</Nav.Link>
+            <Nav.Link onClick={handleLogout}>Log Out</Nav.Link> */}
+            <NavDropdown title="Username" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/user" >Profile</NavDropdown.Item> 
+              <NavDropdown.Item href="#myCharacters" >Characters</NavDropdown.Item>
+              <NavDropdown.Item href="#myCampaigns" >Campaigns</NavDropdown.Item>
+              <NavDropdown.Item onClick={handleLogout}>Log Out</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/adminStuff" disabled>
+                Admin Stuff
+              </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
     </Navbar>
@@ -53,7 +63,6 @@ export default function MainNav({ brand }) {
             <Nav.Link href="/sessionNotes">Session Notes</Nav.Link>
             <Nav.Link href="/generators">Generators</Nav.Link>
             <Nav.Link href="/login">Log In</Nav.Link>
-            <Nav.Link href="/register">Register</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

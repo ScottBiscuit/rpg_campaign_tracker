@@ -17,7 +17,6 @@ import SessionNotes from "./pages/SessionNotes.jsx";
 import Generators from "./pages/Generators.jsx"
 import User from "./pages/User.jsx";
 import Login from "./pages/Login.jsx";
-import Register from "./pages/Register.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,16 +36,15 @@ const router = createBrowserRouter(
       <Route
         path="/sessionNotes"
         element={<SessionNotes />}
-        // loader={async () => {
-        //   const res = await axios.get("/api/sessionNotes");
-        //   const res2 = await axios.get("/api/dmNotes");
-        //   return { sessionNotes: res.data, dmNotes: res2.data };
-        // }}
+        loader={async () => {
+          const res = await axios.get("/api/sessionNotes");
+          const res2 = await axios.get("/api/dmNotes");
+          return { sessionNotes: res.data, dmNotes: res2.data };
+        }}
       />
       <Route path="/generators" element={<Generators />} />
       <Route path="/user" element={<User />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
     </Route>
   )
 );

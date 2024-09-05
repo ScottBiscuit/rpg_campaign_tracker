@@ -1,9 +1,60 @@
-import React from 'react'
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { Card, CardGroup} from "react-bootstrap";
+import LoginForm from "../components/LoginForm";
+import RegisterForm from "../components/RegisterForm";
 
-function Login() {
+export default function Login() {
+  const navigate = useNavigate();
+
+  const handleLogin = async (event, formData) => {
+    event.preventDefault();
+
+    const res = await axios.post("/api/auth", formData);
+
+    if (res.data.success) {
+      navigate("/user");
+    }
+  };
+
+  const handleSignup = async (event, formData) => {
+    event.preventDefault();
+
+    const res = await axios.post("/api/user", formData);
+
+    if (!res.data.error) {
+      navigate("/login");
+    } else {
+      alert(res.data.error);
+    }
+  };
+
   return (
-    <div>Login</div>
-  )
+    <>
+      <Card className="text-center">
+          <CardGroup>
+            <Card>
+              <Card.Body>
+                <Card.Title className="bg-success-subtle p-2">
+                  Log In
+                </Card.Title>
+                <Card.Text className="p-2">
+                  <LoginForm onLogin={handleLogin} />
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card>
+              <Card.Body>
+                <Card.Title className="bg-success-subtle p-2">
+                  Register
+                </Card.Title>
+                <Card.Text className="p-2">
+                  <RegisterForm onLogin={handleSignup} />
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </CardGroup>
+      </Card>
+    </>
+  );
 }
-
-export default Login

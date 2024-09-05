@@ -6,11 +6,11 @@ import {
   Campaign,
   db,
 } from "../src/model.js";
-import userInfo from ".data/users.json" assert { type: "json" };
-import partyInfo from ".data/party.json" assert { type: "json" };
-import initialSessionNotes from ".data/sessionNotes.json" assert { type: "json" };
-import dmNotes from ".data/dmNotes.json" assert { type: "json" };
-import campaignInfo from ".data/campaignInfo.json" assert { type: "json" };
+import userInfo from "./data/users.json" assert { type: "json" };
+import partyInfo from "./data/party.json" assert { type: "json" };
+import initialSessionNotes from "./data/sessionNotes.json" assert { type: "json" };
+import dmNotes from "./data/dmNotes.json" assert { type: "json" };
+import campaignInfo from "./data/campaignInfo.json" assert { type: "json" };
 
 console.log("Synching database...");
 await db.sync({ force: true });
