@@ -16,6 +16,8 @@ import Party from "./pages/Party.jsx";
 import SessionNotes from "./pages/SessionNotes.jsx";
 import Generators from "./pages/Generators.jsx"
 import User from "./pages/User.jsx";
+import MyCharacters from "./pages/MyCharacters.jsx";
+import MyCampaigns from "./pages/MyCampaigns.jsx";
 import Login from "./pages/Login.jsx";
 
 const router = createBrowserRouter(
@@ -43,6 +45,8 @@ const router = createBrowserRouter(
         }}
       />
       <Route path="/generators" element={<Generators />} />
+      <Route path="/myCampaigns" element={<MyCampaigns />} />
+      <Route path="/myCharacters" element={<MyCharacters />} />
       <Route path="/user" element={<User />} />
       <Route path="/login" element={<Login />} />
     </Route>
