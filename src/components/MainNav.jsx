@@ -35,8 +35,8 @@ export default function MainNav({ brand }) {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/party">Party Info</Nav.Link>
             <Nav.Link href="/sessionNotes">Session Notes</Nav.Link>
-            <Nav.Link href="/user">User</Nav.Link>
             <Nav.Link href="/generators">Generators</Nav.Link>
+            <Nav.Link href="/user">User</Nav.Link>
             <Nav.Link onClick={handleLogout}>Log Out</Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -51,6 +51,7 @@ export default function MainNav({ brand }) {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/party">Party Info</Nav.Link>
             <Nav.Link href="/sessionNotes">Session Notes</Nav.Link>
+            <Nav.Link href="/generators">Generators</Nav.Link>
             <Nav.Link href="/login">Log In</Nav.Link>
             <Nav.Link href="/register">Register</Nav.Link>
           </Nav>

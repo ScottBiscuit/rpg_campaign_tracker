@@ -14,6 +14,7 @@ import Home from "./pages/Home.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import Party from "./pages/Party.jsx";
 import SessionNotes from "./pages/SessionNotes.jsx";
+import Generators from "./pages/Generators.jsx"
 import User from "./pages/User.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
@@ -28,20 +29,21 @@ const router = createBrowserRouter(
       <Route
         path="/party"
         element={<Party />}
-        loader={async () => {
-          const res = await axios.get("/api/party");
-          return { party: res.data };
-        }}
+        // loader={async () => {
+        //   const res = await axios.get("/api/party");
+        //   return { party: res.data };
+        // }}
       />
       <Route
         path="/sessionNotes"
         element={<SessionNotes />}
-        loader={async () => {
-          const res = await axios.get("/api/sessionNotes");
-          const res2 = await axios.get("/api/dmNotes");
-          return { sessionNotes: res.data, dmNotes: res2.data };
-        }}
+        // loader={async () => {
+        //   const res = await axios.get("/api/sessionNotes");
+        //   const res2 = await axios.get("/api/dmNotes");
+        //   return { sessionNotes: res.data, dmNotes: res2.data };
+        // }}
       />
+      <Route path="/generators" element={<Generators />} />
       <Route path="/user" element={<User />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />

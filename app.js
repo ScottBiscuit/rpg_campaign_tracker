@@ -4,10 +4,10 @@ import morgan from "morgan";
 import ViteExpress from "vite-express";
 import {
   User,
-  Review,
-  WishlistItem,
-  WishlistReview,
-  Like,
+  Character,
+  Campaign,
+  SessionNote,
+  DMNote
 } from "./src/model.js";
 import { Op, Sequelize } from "sequelize";
 
