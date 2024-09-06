@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Button, Card, CardGroup, Tabs, Tab } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import UserInfo from "../components/user/UserInfo"
 
 export default function User() {
   const [user, setUser] = useState(null);
@@ -22,7 +23,7 @@ export default function User() {
     <Card>
       <Card.Title>My Account</Card.Title>
       <Card.Body>
-
+        <UserInfo user={user} />
       </Card.Body>
       <Card.Footer></Card.Footer>
     </Card>

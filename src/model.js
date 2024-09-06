@@ -67,6 +67,9 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    userBio: {
+      type: DataTypes.TEXT,
+    }
   },
   {
     modelName: "user",
