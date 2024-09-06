@@ -30,7 +30,7 @@ export default function SessionNotes() {
   return (
     <Card>
       <Accordion defaultActiveKey={["0"]} alwaysOpen>
-        <Accordion.Item eventKey="0" className="mb-3 bg-success-subtle">
+        <Accordion.Item eventKey="0" className="mb-3 bg-secondary-subtle">
           <Accordion.Header className="mb-3">
             Future Session Ideas
           </Accordion.Header>

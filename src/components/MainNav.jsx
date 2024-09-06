@@ -28,7 +28,7 @@ export default function MainNav({ brand }) {
   };
 
   return user ? (
-    <Navbar className="bg-success navbar-dark" sticky="top">
+    <Navbar className="bg-dark navbar-dark" sticky="top">
       <Navbar.Brand href="/" className="p-2">
         {brand}
       </Navbar.Brand>

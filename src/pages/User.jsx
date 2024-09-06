@@ -19,7 +19,13 @@ export default function User() {
   const handleNav = () => navigate("/login");
 
   return user ? (
-    <div>User</div>
+    <Card>
+      <Card.Title>My Account</Card.Title>
+      <Card.Body>
+
+      </Card.Body>
+      <Card.Footer></Card.Footer>
+    </Card>
   ) : (
     <Card>
       <Card.Title>
