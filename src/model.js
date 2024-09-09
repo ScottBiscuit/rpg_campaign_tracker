@@ -112,6 +112,12 @@ Character.init(
     pcVision: {
       type: DataTypes.STRING,
     },
+    pcResistances: {
+      type: DataTypes.STRING,
+    },
+    pcImmunities: {
+      type: DataTypes.STRING,
+    },
     pcBackstory: {
       type: DataTypes.TEXT,
     },

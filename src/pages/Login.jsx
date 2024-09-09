@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Card, CardGroup} from "react-bootstrap";
-import LoginForm from "../components/LoginForm";
-import RegisterForm from "../components/RegisterForm";
+import LoginForm from "../components/user/LoginForm";
+import RegisterForm from "../components/user/RegisterForm";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -35,7 +35,7 @@ export default function Login() {
           <CardGroup>
             <Card>
               <Card.Body>
-                <Card.Title className="bg-success-subtle p-2">
+                <Card.Title className="bg-dark-subtle p-2">
                   Log In
                 </Card.Title>
                 <Card.Text className="p-2">
@@ -45,7 +45,7 @@ export default function Login() {
             </Card>
             <Card>
               <Card.Body>
-                <Card.Title className="bg-success-subtle p-2">
+                <Card.Title className="bg-dark-subtle p-2">
                   Register
                 </Card.Title>
                 <Card.Text className="p-2">

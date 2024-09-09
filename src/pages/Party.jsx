@@ -23,7 +23,7 @@ export default function Party() {
   const handleNav = () => navigate("/login");
 
   return user ? (
-    <Card>
+    <Card className="">
       <Card.Title className="p-2">Party Info: Campaign Name Here</Card.Title>
       <Card.Body>
         <Tabs defaultActiveKey="basics" id="party-tabs" className="mb-3">

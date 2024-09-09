@@ -53,7 +53,7 @@ export default function MainNav({ brand }) {
       </Navbar.Collapse>
     </Navbar>
   ) : (
-    <Navbar className="bg-success navbar-dark" sticky="top">
+    <Navbar className="bg-dark navbar-dark" sticky="top">
       <Container fluid>
         <Navbar.Brand href="/">{brand}</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

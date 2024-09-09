@@ -35,18 +35,32 @@ const usersInDB = await Promise.all(
 //  add player characters to db
 const charactersInDB = await Promise.all(
     partyInfo.map((character) => {
-    const { pcName, pcRace, pcClass, pcSubclass, pcLevel, pcImg, pcBackstory, pcAllies, pcGoals, pcExtras } = character;
+    const { pcName, pcRace, pcClass, pcSubclass, pcLevel, pcImg, pcBackstory, pcAllies, pcEnemies, pcGoals, pcExtras, pcArmor, pcHealth, pcMovement, pcVision, pcResistances, pcImmunities, pcBGName, pcBGDesc, pcTools, pcLanguages, pcPassPer, pcPassInv, pcPassIns } = character;
     const newDMNote = Character.create({
         pcName: pcName,
         pcRace: pcRace,
         pcClass: pcClass,
         pcSubclass: pcSubclass,
         pcLevel: pcLevel,
-        pcImg: pcImg,
+        pcArmor: pcArmor,
+        pcHealth: pcHealth,
+        pcMovement: pcMovement,
+        pcVision: pcVision,
+        pcResistances: pcResistances,
+        pcImmunities: pcImmunities,
         pcBackstory: pcBackstory,
         pcAllies: pcAllies,
+        pcEnemies: pcEnemies,
         pcGoals: pcGoals,
-        pcExtras: pcExtras
+        pcExtras: pcExtras,
+        pcBGName: pcBGName,
+        pcBGDesc: pcBGDesc,
+        pcTools: pcTools,
+        pcLanguages: pcLanguages,
+        pcPassPer: pcPassPer,
+        pcPassInv: pcPassInv,
+        pcPassIns: pcPassIns,
+        pcImg: pcImg,
     });
     return newDMNote;
   })
