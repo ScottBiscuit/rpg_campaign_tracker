@@ -1,13 +1,13 @@
 [
   {
-    "username": "Scott",
+    "username": "ScottTheGM",
     "email": "gm@test.com",
     "password": "test",
     "userRole": "gm",
     "userImg": ""
   },
   {
-    "username": "Player",
+    "username": "PlayerOne",
     "email": "player@test.com",
     "password": "test",
     "userRole": "player",

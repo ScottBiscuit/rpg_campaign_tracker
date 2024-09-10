@@ -23,7 +23,7 @@
     "pcPassPer": 14,
     "pcPassInv": 9,
     "pcPassIns": 11,
-    "pcImg": "./images/cawlin.png"
+    "pcImg": "https://rpgcampaigntracker.s3.amazonaws.com/Drax.jpeg"
   },
   {
     "pcName": "Eris Vo",
@@ -49,7 +49,7 @@
     "pcPassPer": 13,
     "pcPassInv": 11,
     "pcPassIns": 10,
-    "pcImg": "./images/cawlin.png"
+    "pcImg": "https://rpgcampaigntracker.s3.amazonaws.com/Eris.png"
   },
   {
     "pcName": "Evrenden",
@@ -75,7 +75,7 @@
     "pcPassPer": 19,
     "pcPassInv": 10,
     "pcPassIns": 16,
-    "pcImg": "./images/cawlin.png"
+    "pcImg": "https://rpgcampaigntracker.s3.amazonaws.com/evrenden.jpeg"
   },
   {
     "pcName": "Locky McWarlock",
@@ -101,6 +101,6 @@
     "pcPassPer": 14,
     "pcPassInv": 9,
     "pcPassIns": 11,
-    "pcImg": "./images/cawlin.png"
+    "pcImg": "https://rpgcampaigntracker.s3.amazonaws.com/locky.jpg"
   }
 ]

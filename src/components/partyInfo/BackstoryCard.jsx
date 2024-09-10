@@ -1,23 +1,30 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Card, CardGroup, ListGroup, Row } from "react-bootstrap";
+import DeletePCModal from "./DeletePCModal";
+import EditPCModal from "./EditPCModal";
 
-export default function BackstoryCard({ user }) {
-  const [party, setParty] = useState([]);
+export default function BackstoryCard({ user, party, setParty, PC }) {
+  // const [party, setParty] = useState([]);
 
-  useEffect(() => {
-    generateParty();
-  }, []);
+  // useEffect(() => {
+  //   generateParty();
+  // }, []);
 
-  const generateParty = async () => {
-    const res = await axios.get(`/api/party/`);
+  // const generateParty = async () => {
+  //   const res = await axios.get(`/api/party/`);
 
-    setParty(res.data);
-  };
+  //   setParty(res.data);
+  // };
 
-  const playerRows = party.map((PC) => (
-    <Card key={PC.pcID} className="mb-2">
-      <Card.Title className="m-1">{PC.pcName}</Card.Title>
+  // const playerRows = party.map((PC) => (
+    
+  ;
+
+  return (
+    <Row className="p-2 bg-dark-subtle">
+      <Card key={PC.pcID} className="mb-2">
+      <Card.Title className="m-1">Backstory</Card.Title>
       <CardGroup>
         <Card className="">
           <Card.Body>
@@ -34,11 +41,21 @@ export default function BackstoryCard({ user }) {
           </Card.Body>
         </Card>
       </CardGroup>
-      <Card.Footer>Del - Edit</Card.Footer>
+      <Card.Footer>
+        <DeletePCModal 
+          user={user}
+          party={party}
+          setParty={setParty}
+          PC={PC}
+        />
+        <EditPCModal 
+          user={user}
+          party={party}
+          setParty={setParty}
+          PC={PC}
+        />
+      </Card.Footer>
     </Card>
-  ));
-
-  return (
-    party && user && <Row className="p-2 bg-secondary-subtle">{playerRows}</Row>
+    </Row>
   );
 }

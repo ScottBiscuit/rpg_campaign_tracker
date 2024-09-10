@@ -162,29 +162,62 @@ app.get("/api/party/:pcId", loginRequired, async (req, res) => {
 app.post("/api/party", loginRequired, async (req, res) => {
   const {
     pcId,
-    pcImg,
     pcName,
     pcRace,
     pcClass,
+    pcSubclass,
     pcLevel,
+    pcArmor,
+    pcHealth,
+    pcMovement,
+    pcVision,
+    pcResistances,
+    pcImmunities,
     pcBackstory,
     pcAllies,
+    pcEnemies,
     pcGoals,
     pcExtras,
+    pcBGName,
+    pcBGDesc,
+    pcTools,
+    pcLanguages,
+    pcPassPer,
+    pcPassInv,
+    pcPassIns,
+    pcImg,
   } = req.body;
 
   const newPC = await Character.create({
     // if no value is provided in req.body, use default values
     pcId: pcId,
-    pcImg: pcImg || "./images/img_default.jpg",
+    
+    
+    
     pcName: pcName || "",
     pcRace: pcRace || "",
     pcClass: pcClass || "",
-    pcLevel: +pcLevel || 0,
+    pcSubclass: pcSubclass || "",
+    pcLevel: +pcLevel || 1,
+    pcArmor: pcArmor || "",
+    pcHealth: pcHealth || "",
+    pcMovement: pcMovement || "",
+    pcVision: pcVision || "",
+    pcResistances: pcResistances || "",
+    pcImmunities: pcImmunities || "",
     pcBackstory: pcBackstory || "",
     pcAllies: pcAllies || "",
+    pcEnemies: pcEnemies || "",
     pcGoals: pcGoals || "",
     pcExtras: pcExtras || "",
+    pcBGName: pcBGName || "",
+    pcBGDesc: pcBGDesc || "",
+    pcTools: pcTools || "",
+    pcLanguages: pcLanguages || "",
+    pcPassPer: pcPassPer || "",
+    pcPassInv: pcPassInv || "",
+    pcPassIns: pcPassIns || "",
+    pcImg: pcImg || "./images/img_default.jpg",
   });
   res.json(newPC);
 });

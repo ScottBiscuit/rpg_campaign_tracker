@@ -1,42 +1,52 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Card, CardGroup, Row } from "react-bootstrap";
+import DeletePCModal from "./DeletePCModal";
+import EditPCModal from "./EditPCModal";
 
-export default function GoalsCard({ user }) {
-  const [party, setParty] = useState([]);
+export default function GoalsCard({ user, party, setParty, PC }) {
+  // const [party, setParty] = useState([]);
 
-  useEffect(() => {
-    generateParty();
-  }, []);
+  // useEffect(() => {
+  //   generateParty();
+  // }, []);
 
-  const generateParty = async () => {
-    const res = await axios.get(`/api/party/`);
+  // const generateParty = async () => {
+  //   const res = await axios.get(`/api/party/`);
 
-    setParty(res.data);
-  };
+  //   setParty(res.data);
+  // };
 
-  const playerRows = party.map((PC) => (
-    <Card key={PC.pcID} className="mb-2">
-      <Card.Title className="m-1">{PC.pcName}</Card.Title>
-      <CardGroup>
-        <Card className="">
-          <Card.Body>
-            <Card.Subtitle>Goals/Missions</Card.Subtitle>
-            <Card.Text>{PC.pcBackstory}</Card.Text>
-          </Card.Body>
-        </Card>
-        <Card className="">
-          <Card.Body>
-            <Card.Subtitle>Other stuff</Card.Subtitle>
-            <Card.Text>More stuff</Card.Text>
-          </Card.Body>
-        </Card>
-      </CardGroup>
-      <Card.Footer>Del - Edit</Card.Footer>
-    </Card>
-  ));
+  // const playerRows = party.map((PC) => (
 
   return (
-    party && user && <Row className="p-2 bg-secondary-subtle">{playerRows}</Row>
+    <Row className="p-2 bg-dark-subtle">
+      <Card key={PC.pcID} className="mb-2">
+        <Card.Title className="m-1">{PC.pcName}</Card.Title>
+        <CardGroup>
+          <Card className="">
+            <Card.Body>
+              <Card.Subtitle>Goals/Missions</Card.Subtitle>
+              <Card.Text>{PC.pcBackstory}</Card.Text>
+            </Card.Body>
+          </Card>
+          <Card className="">
+            <Card.Body>
+              <Card.Subtitle>Other stuff</Card.Subtitle>
+              <Card.Text>More stuff</Card.Text>
+            </Card.Body>
+          </Card>
+        </CardGroup>
+        <Card.Footer>
+          <DeletePCModal
+            user={user}
+            party={party}
+            setParty={setParty}
+            PC={PC}
+          />
+          <EditPCModal user={user} party={party} setParty={setParty} PC={PC} />
+        </Card.Footer>
+      </Card>
+    </Row>
   );
 }

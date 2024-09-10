@@ -136,9 +136,6 @@ Character.init(
     pcBGName: {
       type: DataTypes.STRING,
     },
-    pcBGDesc: {
-      type: DataTypes.TEXT,
-    },
     pcTools: {
       type: DataTypes.STRING,
     },
@@ -153,6 +150,10 @@ Character.init(
     },
     pcPassIns: {
       type: DataTypes.INTEGER,
+    },
+    pcImg: {
+      type: DataTypes.STRING,
+      allowNull: false,
     }
   },
   {

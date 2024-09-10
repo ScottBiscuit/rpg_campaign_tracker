@@ -30,6 +30,13 @@ export default function MainNav({ brand }) {
   return user ? (
     <Navbar className="bg-dark navbar-dark" sticky="top">
       <Navbar.Brand href="/" className="p-2">
+        <img
+          alt=""
+          src="./images/d20.png"
+          width="30"
+          height="30"
+          className="d-inline-block align-top"
+        />{' '}
         {brand}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -39,7 +46,11 @@ export default function MainNav({ brand }) {
           <Nav.Link href="/party">Party Info</Nav.Link>
           <Nav.Link href="/sessionNotes">Session Notes</Nav.Link>
           <Nav.Link href="/generators">Generators</Nav.Link>
-          <NavDropdown title={user.username} id="basic-nav-dropdown">
+          <NavDropdown
+            title={user.username}
+            id="basic-nav-dropdown"
+            className="align-end"
+          >
             <NavDropdown.Item href="/user">Profile</NavDropdown.Item>
             <NavDropdown.Item href="/myCharacters">Characters</NavDropdown.Item>
             <NavDropdown.Item href="/myCampaigns">Campaigns</NavDropdown.Item>
@@ -49,6 +60,15 @@ export default function MainNav({ brand }) {
               Admin Stuff
             </NavDropdown.Item>
           </NavDropdown>
+          <Navbar.Brand href="/">
+            <img
+              alt=""
+              src="./images/d20.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />
+          </Navbar.Brand>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

@@ -27,15 +27,14 @@ body {
   min-width: 320px;
   min-height: 100vh;
   .accordion {
-	--bs-accordion-btn-color: ghostwhite;
-	--bs-accordion-btn-bg: pink;
-	--bs-accordion-active-color: maroon;
-	--bs-accordion-active-bg: lightpink;
-}
+    --bs-accordion-btn-color: ghostwhite;
+    --bs-accordion-btn-bg: pink;
+    --bs-accordion-active-color: maroon;
+    --bs-accordion-active-bg: lightpink;
+  }
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
