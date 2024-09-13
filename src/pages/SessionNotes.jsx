@@ -30,8 +30,9 @@ export default function SessionNotes() {
   return (
     <Card>
       <Card.Title className="p-2">Session Notes: Campaign Name Here</Card.Title>
+      <Card.Body>
       <Accordion defaultActiveKey={["0"]} alwaysOpen>
-        <Accordion.Item eventKey="0" className="mb-3 bg-dark-subtle">
+        <Accordion.Item eventKey="0" className="mb-3 bg-dark-subtle" >
           <Accordion.Header className="mb-3">
             Future Session Ideas
           </Accordion.Header>
@@ -43,6 +44,7 @@ export default function SessionNotes() {
         <AddSesNote setNotes={setNotes} sessionNotes={sessionNotes} />
         <div>{sessionNotesList}</div>
       </Accordion>
+      </Card.Body>
     </Card>
   );
 }

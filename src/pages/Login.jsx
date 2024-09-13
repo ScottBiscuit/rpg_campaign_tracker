@@ -13,7 +13,9 @@ export default function Login() {
     const res = await axios.post("/api/auth", formData);
 
     if (res.data.success) {
-      navigate("/user");
+      navigate("/party");
+    } else {
+      alert("Login details incorrect. Please try again.");
     }
   };
 

@@ -42,7 +42,7 @@ export default function BackstoryCard({ user, party, setParty, PC }) {
         </Card>
       </CardGroup>
       <Card.Footer>
-        <DeletePCModal 
+        {/* <DeletePCModal 
           user={user}
           party={party}
           setParty={setParty}
@@ -53,7 +53,7 @@ export default function BackstoryCard({ user, party, setParty, PC }) {
           party={party}
           setParty={setParty}
           PC={PC}
-        />
+        /> */}
       </Card.Footer>
     </Card>
     </Row>

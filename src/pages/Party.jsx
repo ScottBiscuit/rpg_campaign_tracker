@@ -8,6 +8,8 @@ import BackstoryCard from "../components/partyInfo/BackstoryCard";
 import GoalsCard from "../components/partyInfo/GoalsCard";
 import AddPCModal from "../components/partyInfo/AddPCModal";
 import PartyOverviewCard from "../components/partyInfo/PartyOverviewCard";
+import DeletePCModal from "../components/partyInfo/DeletePCModal";
+import EditPCModal from "../components/partyInfo/EditPCModal";
 
 export default function Party() {
   const [user, setUser] = useState(null);
@@ -38,6 +40,8 @@ export default function Party() {
       <GoalsCard PC={PC} party={party} setParty={setParty}/>
       <BackstoryCard PC={PC} party={party} setParty={setParty}/>
       <ExtraInfoCard PC={PC} party={party} setParty={setParty}/>
+      <DeletePCModal PC={PC} party={party} setParty={setParty}/>
+      <EditPCModal PC={PC} party={party} setParty={setParty}/>
     </Tab>
   ));
 
@@ -45,11 +49,12 @@ export default function Party() {
     <Card className="">
       <Card.Title className="p-2">Party Info: Campaign Name Here</Card.Title>
       <Card.Body>
-        <Tabs defaultActiveKey="overview" id="party-tabs" className="mb-3">
+        <Tabs defaultActiveKey="overview" id="party-tabs" className="mb-3" >
           <Tab eventKey="overview" title="Overview">
             <PartyOverviewCard user={user} party={party} setParty={setParty} />
           </Tab>
           {playerTabs}
+          <Tab eventKey="add" title="Add Player"></Tab>
         </Tabs>
       </Card.Body>
       <Card.Footer>

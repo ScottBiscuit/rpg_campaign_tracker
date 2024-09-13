@@ -21,13 +21,13 @@ export default function DeletePCModal({ party, setParty, PC, user }) {
     });
 
     const handleChange = (e) => {
-        setFormState({ ...character, [e.target.name]: e.target.value });
+        setCharacter({ ...character, [e.target.name]: e.target.value });
       };
 
   const handleSubmit = () => {
 
     axios.delete(`/api/party/${PC.pcId}/delete`, 
-      { pcId: formState.pcId }).then((res) => {
+      { pcId: setCharacter.pcId }).then((res) => {
 
         const deletedResData = PC.pcId
 

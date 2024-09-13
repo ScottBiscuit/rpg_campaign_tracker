@@ -199,8 +199,8 @@ app.post("/api/party", loginRequired, async (req, res) => {
     pcClass: pcClass || "",
     pcSubclass: pcSubclass || "",
     pcLevel: +pcLevel || 1,
-    pcArmor: pcArmor || "",
-    pcHealth: pcHealth || "",
+    pcArmor: pcArmor || 0,
+    pcHealth: pcHealth || 0,
     pcMovement: pcMovement || "",
     pcVision: pcVision || "",
     pcResistances: pcResistances || "",
@@ -214,10 +214,10 @@ app.post("/api/party", loginRequired, async (req, res) => {
     pcBGDesc: pcBGDesc || "",
     pcTools: pcTools || "",
     pcLanguages: pcLanguages || "",
-    pcPassPer: pcPassPer || "",
-    pcPassInv: pcPassInv || "",
-    pcPassIns: pcPassIns || "",
-    pcImg: pcImg || "./images/img_default.jpg",
+    pcPassPer: pcPassPer || 0,
+    pcPassInv: pcPassInv || 0,
+    pcPassIns: pcPassIns || 0,
+    pcImg: pcImg || "https://rpgcampaigntracker.s3.amazonaws.com/player_unknown.png",
   });
   res.json(newPC);
 });

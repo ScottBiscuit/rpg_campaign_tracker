@@ -61,7 +61,7 @@ export default function AddSesNote({ setNotes, sessionNotes }) {
 
   return (
     <>
-      <Button variant="success" onClick={handleShow}>
+      <Button variant="secondary" onClick={handleShow}>
         Add New Session
       </Button>
 
@@ -120,7 +120,7 @@ export default function AddSesNote({ setNotes, sessionNotes }) {
           <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
-          <Button variant="success" type="submit" onClick={handleSubmit}>
+          <Button variant="primary" type="submit" onClick={handleSubmit}>
             Save Changes
           </Button>
         </Modal.Footer>

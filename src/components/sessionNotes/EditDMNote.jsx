@@ -1,7 +1,7 @@
 import React from "react";
+import axios from "axios";
 import { BsFillPencilFill } from "react-icons/bs";
 import { useState } from "react";
-import axios from "axios";
 import { Button, Modal, Form } from "react-bootstrap";
 
 export default function EditDMNote({ setDMNotes, dmNotes, dmNote }) {
@@ -45,7 +45,7 @@ export default function EditDMNote({ setDMNotes, dmNotes, dmNote }) {
 
   return (
     <>
-      <Button variant="success" onClick={handleShow}>
+      <Button variant="secondary" onClick={handleShow}>
         <BsFillPencilFill />
       </Button>
 
@@ -72,7 +72,7 @@ export default function EditDMNote({ setDMNotes, dmNotes, dmNote }) {
           <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
-          <Button variant="success" type="submit" onClick={handleSubmit}>
+          <Button variant="primary" type="submit" onClick={handleSubmit}>
             Edit Note
           </Button>
         </Modal.Footer>

@@ -9,6 +9,9 @@ export default function BasicInfoCard({ user, party, setParty, PC }) {
         <Card.Title className="m-1">Basic Info - {PC.pcName}</Card.Title>
         <CardGroup>
           <Card className="">
+            <Card.Img src={PC.pcImg} />
+          </Card>
+          <Card className="">
             <Card.Body>
               <ListGroup className="list-group-flush">
                 <ListGroup.Item>Race: {PC.pcRace}</ListGroup.Item>
@@ -44,13 +47,13 @@ export default function BasicInfoCard({ user, party, setParty, PC }) {
           </Card>
         </CardGroup>
         <Card.Footer>
-          <DeletePCModal
+          {/* <DeletePCModal
             user={user}
             party={party}
             setParty={setParty}
             PC={PC}
           />
-          <EditPCModal user={user} party={party} setParty={setParty} PC={PC} />
+          <EditPCModal user={user} party={party} setParty={setParty} PC={PC} /> */}
         </Card.Footer>
       </Card>
     </Row>

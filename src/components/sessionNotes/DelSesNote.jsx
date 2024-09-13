@@ -47,7 +47,7 @@ export default function DelSesNote({ setNotes, sessionNotes, sesNote}) {
 
   return (
     <>
-      <Button variant="success" onClick={handleShow}>
+      <Button variant="secondary" onClick={handleShow}>
         <BsFillTrashFill />
       </Button>
 
@@ -60,7 +60,7 @@ export default function DelSesNote({ setNotes, sessionNotes, sesNote}) {
           <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
-          <Button variant="success" type='submit' onClick={handleSubmit}>
+          <Button variant="primary" type='submit' onClick={handleSubmit}>
             Delete Note
           </Button>
         </Modal.Footer>

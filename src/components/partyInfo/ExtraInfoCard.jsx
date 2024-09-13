@@ -25,9 +25,10 @@ export default function GoalsCard({ user, party, setParty, PC }) {
         <Card.Title className="m-1">Other Info</Card.Title>
         <CardGroup>
           <Card className="">
+            <Card.Img src={PC.pcImg} roundedCircle/>
             <Card.Body>
               <Card.Subtitle>Extra Info</Card.Subtitle>
-              <Card.Text>{PC.Extras}</Card.Text>
+              <Card.Text>{PC.pcExtras}</Card.Text>
             </Card.Body>
           </Card>
           <Card className="">
@@ -38,13 +39,13 @@ export default function GoalsCard({ user, party, setParty, PC }) {
           </Card>
         </CardGroup>
         <Card.Footer>
-          <DeletePCModal
+          {/* <DeletePCModal
             user={user}
             party={party}
             setParty={setParty}
             PC={PC}
           />
-          <EditPCModal user={user} party={party} setParty={setParty} PC={PC} />
+          <EditPCModal user={user} party={party} setParty={setParty} PC={PC} /> */}
         </Card.Footer>
       </Card>
     </Row>

@@ -69,7 +69,7 @@ export default function AddPCModal({ party, setParty, PC, user }) {
     });
     console.log(newCharacter);
 
-    setParty([newCharacter.data, ...party]);
+    setParty([...party, newCharacter.data]);
 
     handleClose();
   };

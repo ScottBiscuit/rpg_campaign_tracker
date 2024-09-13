@@ -44,7 +44,7 @@ export default function DelDMNote({ setDMNotes, dmNotes, dmNote }) {
 
   return (
     <>
-      <Button variant="success" onClick={handleShow}>
+      <Button variant="secondary" onClick={handleShow}>
         <BsFillTrashFill />
       </Button>
 
@@ -59,7 +59,7 @@ export default function DelDMNote({ setDMNotes, dmNotes, dmNote }) {
           <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
-          <Button variant="success" type="submit" onClick={handleSubmit}>
+          <Button variant="dark" type="submit" onClick={handleSubmit}>
             Delete Note
           </Button>
         </Modal.Footer>

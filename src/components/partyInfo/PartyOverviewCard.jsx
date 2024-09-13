@@ -8,6 +8,9 @@ export default function PartyOverviewCard({ user, party, setParty }) {
       <Card.Title className="m-1">{PC.pcName}</Card.Title>
       <CardGroup>
         <Card className="">
+          <Card.Img src={PC.pcImg} />
+        </Card>
+        <Card className="">
           <Card.Body>
             <ListGroup className="list-group-flush">
               <ListGroup.Item>Race: {PC.pcRace}</ListGroup.Item>
