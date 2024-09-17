@@ -31,7 +31,7 @@ export default function AddDMNote({ setDMNotes, dmNotes }) {
 
   return (
     <>
-      <Button variant="secondary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow}>
         Add New Idea
       </Button>
 

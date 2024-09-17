@@ -3,7 +3,7 @@ import { Col, ListGroup, Row } from "react-bootstrap";
 import EditDMNote from "./EditDMNote";
 import DelDMNote from "./DelDMNote";
 
-export default function AccordionDMItem({ dmNote, setDMNotes, dmNotes }) {
+export default function DMItem({ dmNote, setDMNotes, dmNotes }) {
   const { dmNoteId, dmNoteIdeas } = dmNote;
 
   return (

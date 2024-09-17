@@ -77,7 +77,7 @@ export default function AddPCModal({ party, setParty, PC, user }) {
 
 return (
   <>
-    <Button variant="success" onClick={handleShow}>
+    <Button variant="primary" onClick={handleShow}>
       Add New Party Member
     </Button>
 

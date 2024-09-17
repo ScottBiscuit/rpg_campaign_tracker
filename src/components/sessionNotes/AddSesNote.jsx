@@ -61,7 +61,7 @@ export default function AddSesNote({ setNotes, sessionNotes }) {
 
   return (
     <>
-      <Button variant="secondary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow}>
         Add New Session
       </Button>
 

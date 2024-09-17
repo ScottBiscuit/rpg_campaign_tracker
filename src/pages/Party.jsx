@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Button, Card, Tabs, Tab } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { Button, Card, Tabs, Tab } from "react-bootstrap";
 import BasicInfoCard from "../components/partyInfo/BasicInfoCard";
 import ExtraInfoCard from "../components/partyInfo/ExtraInfoCard";
 import BackstoryCard from "../components/partyInfo/BackstoryCard";

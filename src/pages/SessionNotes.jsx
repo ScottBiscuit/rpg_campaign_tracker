@@ -1,6 +1,15 @@
-import { useLoaderData } from "react-router-dom";
-import { useState } from "react";
-import { Accordion, Card, ListGroup } from "react-bootstrap";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import {
+  Accordion,
+  Button,
+  Card,
+  ListGroup,
+  Tabs,
+  Tab,
+  Row,
+} from "react-bootstrap";
 import SesItem from "../components/sessionNotes/SesItem";
 import DMItem from "../components/sessionNotes/DMItem";
 import AddSesNote from "../components/sessionNotes/AddSesNote";
@@ -9,6 +18,22 @@ import AddDMNote from "../components/sessionNotes/AddDMNote";
 export default function SessionNotes() {
   const [sessionNotes, setNotes] = useState(useLoaderData().sessionNotes);
   const [dmNotes, setDMNotes] = useState(useLoaderData().dmNotes);
+
+  const [user, setUser] = useState(null);
+  const [party, setParty] = useState([]);
+
+  useEffect(() => {
+    // generateParty();
+    getUser();
+  }, []);
+
+  const getUser = async () => {
+    const res = await axios.get("/api/auth");
+    setUser(res.data.user);
+  };
+
+  const navigate = useNavigate();
+  const handleNav = () => navigate("/login");
 
   const sessionNotesList = sessionNotes.map((sesNote) => (
     <SesItem
@@ -27,24 +52,37 @@ export default function SessionNotes() {
     />
   ));
 
-  return (
+  return user ? (
     <Card>
       <Card.Title className="p-2">Session Notes: Campaign Name Here</Card.Title>
       <Card.Body>
-      <Accordion defaultActiveKey={["0"]} alwaysOpen>
-        <Accordion.Item eventKey="0" className="mb-3 bg-dark-subtle" >
-          <Accordion.Header className="mb-3">
-            Future Session Ideas
-          </Accordion.Header>
-          <Accordion.Body>
-            <AddDMNote dmNotes={dmNotes} setDMNotes={setDMNotes} />
-            <ListGroup className="mb-3">{dmNotesList}</ListGroup>
-          </Accordion.Body>
-        </Accordion.Item>
-        <AddSesNote setNotes={setNotes} sessionNotes={sessionNotes} />
-        <div>{sessionNotesList}</div>
-      </Accordion>
+        <Tabs defaultActiveKey="dmnotes" id="notes-tabs" className="mb-3">
+          <Tab eventKey="dmnotes" title="Future Session Ideas">
+            <Row className="p-2 bg-dark-subtle">
+              <AddDMNote
+                user={user}
+                setUser={setUser}
+                dmNotes={dmNotes}
+                setDMNotes={setDMNotes}
+              />
+              <Card>{dmNotesList}</Card>
+            </Row>
+          </Tab>
+          <Tab eventKey="sessionnotes" title="Session Notes">
+            <Accordion defaultActiveKey={["0"]} alwaysOpen>
+              <AddSesNote setNotes={setNotes} sessionNotes={sessionNotes} />
+              <div>{sessionNotesList}</div>
+            </Accordion>
+          </Tab>
+        </Tabs>
       </Card.Body>
+    </Card>
+  ) : (
+    <Card>
+      <Card.Title>
+        You are not currently logged in. Click the link below to login.
+      </Card.Title>
+      <Button onClick={handleNav}>Login</Button>
     </Card>
   );
 }

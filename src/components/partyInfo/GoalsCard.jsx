@@ -22,7 +22,7 @@ export default function GoalsCard({ user, party, setParty, PC }) {
   return (
     <Row className="p-2 bg-dark-subtle">
       <Card key={PC.pcID} className="mb-2">
-        <Card.Title className="m-1">{PC.pcName}</Card.Title>
+        <Card.Title className="m-1">Character Goals / Important People</Card.Title>
         <CardGroup>
           <Card className="">
             <Card.Body>
@@ -32,8 +32,10 @@ export default function GoalsCard({ user, party, setParty, PC }) {
           </Card>
           <Card className="">
             <Card.Body>
-              <Card.Subtitle>Other stuff</Card.Subtitle>
-              <Card.Text>More stuff</Card.Text>
+              <Card.Subtitle>Allies</Card.Subtitle>
+              <Card.Text>{PC.pcAllies}</Card.Text>
+              <Card.Subtitle>Enemies</Card.Subtitle>
+              <Card.Text>{PC.pcEnemies}</Card.Text>
             </Card.Body>
           </Card>
         </CardGroup>

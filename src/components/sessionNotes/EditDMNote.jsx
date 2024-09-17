@@ -45,7 +45,7 @@ export default function EditDMNote({ setDMNotes, dmNotes, dmNote }) {
 
   return (
     <>
-      <Button variant="secondary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow}>
         <BsFillPencilFill />
       </Button>
 

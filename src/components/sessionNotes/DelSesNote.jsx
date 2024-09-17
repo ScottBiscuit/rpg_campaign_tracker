@@ -47,7 +47,7 @@ export default function DelSesNote({ setNotes, sessionNotes, sesNote}) {
 
   return (
     <>
-      <Button variant="secondary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow}>
         <BsFillTrashFill />
       </Button>
 

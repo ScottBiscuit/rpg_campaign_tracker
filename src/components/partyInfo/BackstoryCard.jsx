@@ -18,44 +18,33 @@ export default function BackstoryCard({ user, party, setParty, PC }) {
   // };
 
   // const playerRows = party.map((PC) => (
-    
-  ;
 
   return (
     <Row className="p-2 bg-dark-subtle">
       <Card key={PC.pcID} className="mb-2">
-      <Card.Title className="m-1">Backstory</Card.Title>
-      <CardGroup>
-        <Card className="">
-          <Card.Body>
-            <Card.Subtitle>Backstory</Card.Subtitle>
-            <Card.Text>
-              {PC.pcBackstory} Player written backstory here
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card className="">
-          <Card.Body>
-            <Card.Subtitle>Background: {PC.pcBGName}</Card.Subtitle>
-            <Card.Text>{PC.pcBGDesc} Background description here</Card.Text>
-          </Card.Body>
-        </Card>
-      </CardGroup>
-      <Card.Footer>
-        {/* <DeletePCModal 
-          user={user}
-          party={party}
-          setParty={setParty}
-          PC={PC}
-        />
-        <EditPCModal 
-          user={user}
-          party={party}
-          setParty={setParty}
-          PC={PC}
-        /> */}
-      </Card.Footer>
-    </Card>
+        <Card.Title className="m-1">Background / Backstory</Card.Title>
+        <CardGroup>
+          <Card className="">
+            <Card.Body>
+              <Card.Subtitle>Backstory</Card.Subtitle>
+              <Card.Text>
+                {PC.pcBackstory} Player written backstory here
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <Card className="">
+            <Card.Body>
+              <Card.Subtitle>Background: </Card.Subtitle>
+              <Card.Text>{PC.pcBGName}</Card.Text>
+              <Card.Subtitle>Tools</Card.Subtitle>
+              <Card.Text>{PC.pcTools}</Card.Text>
+              <Card.Subtitle>Tools</Card.Subtitle>
+              <Card.Text>{PC.pcTools}</Card.Text>
+            </Card.Body>
+          </Card>
+        </CardGroup>
+        <Card.Footer></Card.Footer>
+      </Card>
     </Row>
   );
 }

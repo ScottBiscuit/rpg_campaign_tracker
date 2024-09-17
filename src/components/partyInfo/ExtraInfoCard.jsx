@@ -25,7 +25,7 @@ export default function GoalsCard({ user, party, setParty, PC }) {
         <Card.Title className="m-1">Other Info</Card.Title>
         <CardGroup>
           <Card className="">
-            <Card.Img src={PC.pcImg} roundedCircle/>
+            
             <Card.Body>
               <Card.Subtitle>Extra Info</Card.Subtitle>
               <Card.Text>{PC.pcExtras}</Card.Text>

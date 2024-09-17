@@ -28,9 +28,10 @@ body {
   min-height: 100vh;
   .accordion {
     --bs-accordion-btn-color: ghostwhite;
-    --bs-accordion-btn-bg: rgb(80, 80, 80);
+    --bs-accordion-btn-bg: rgb(159, 159, 159);
     --bs-accordion-active-color: rgb(248, 248, 255);
-    --bs-accordion-active-bg: rgb(159, 159, 159);
+    --bs-accordion-active-bg: rgb(80, 80, 80);
+    rgb(80, 80, 80)
   }
 }
 

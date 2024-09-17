@@ -75,7 +75,7 @@ export default function EditSesNote({ setNotes, sessionNotes, sesNote }) {
 
   return (
     <>
-      <Button variant="secondary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow}>
         <BsFillPencilFill />
       </Button>
 
